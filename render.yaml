@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: biodata-parser
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python parse_biodata.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
